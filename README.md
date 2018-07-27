@@ -6,8 +6,8 @@ Install all dependencies:
 yarn
 ```
 
-To get the error you see below, you have to either run:
-If you click on `Welcome to React Native!` you will get the inlined function call.
+To get the error you see below, you have to either run:  
+If you click on `Welcome to React Native!` you will get the inlined function call.  
 If you click on `To get started, edit App.js` you will get "normal" function call.
 
 On Android:
@@ -68,7 +68,7 @@ git clone --depth 1 -b feature/react-native-tests https://github.com/getsentry/s
 
 Here are the tests: https://github.com/getsentry/symbolic/pull/78/files#diff-55ed52f2de2342e85ec60818eb47e7ccR136
 
-If you want to copy new source maps to test in symbolic, copy them to `py/tests/res/sourcemaps/` in symbolic.
+If you want to copy new source maps to test in symbolic, copy them to `py/tests/res/sourcemaps/` in symbolic.  
 We only need the sourcemaps since the source code is inlined.
 
 To run the tests in symbolic:
@@ -128,5 +128,5 @@ tests/test_sourcemaps.py:147: AssertionError
 ============================================= 1 failed, 8 passed in 0.29 seconds ==============================================
 ```
 
-This shows that the source map test for Android are failing.
+This shows that the source map test for Android are failing.  
 Both source code location on iOS and Android should be the same, even though the reported crash location can be different.
