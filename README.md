@@ -14,15 +14,19 @@ On Android:
 ```
 react-native run-android --variant=release
 ```
-![Inline](https://github.com/hazat/react-native-source-map/raw/master/inline-android.png | width=200)
-![Function](https://github.com/hazat/react-native-source-map/raw/master/function-android.png | width=200)
+
+<img align="left" width="200" src="https://github.com/hazat/react-native-source-map/raw/master/inline-android.png" alt="inline">
+<img align="right" width="200" src="https://github.com/hazat/react-native-source-map/raw/master/function-android.png" alt="Function">
+
 
 On iOS:
 ```
 react-native run-ios --configuration "Release"
 ```
-![Inline](https://github.com/hazat/react-native-source-map/raw/master/inline-ios.png | width=200)
-![Function](https://github.com/hazat/react-native-source-map/raw/master/function-ios.png | width=200)
+
+<img align="left" width="200" src="https://github.com/hazat/react-native-source-map/raw/master/inline-ios.png" alt="inline">
+<img align="right" width="200" src="https://github.com/hazat/react-native-source-map/raw/master/function-ios.png" alt="Function">
+
 
 Out of this error you will get the `line` & `col` where the crash happend, we need that to feed into symbolic later.
 
