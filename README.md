@@ -6,11 +6,11 @@ Install all dependencies:
 yarn
 ```
 
-To get the error you see below, you have to either run:  
-If you click on `Welcome to React Native!` you will get the inlined function call.  
-If you click on `To get started, edit App.js` you will get "normal" function call.
+To get the error you see below:  
+click on `Welcome to React Native!` you will get the inlined function call.  
+click on `To get started, edit App.js` you will get "normal" function call.
 
-On Android:
+On Android this produces (only first frame line:col is important):
 ```
 react-native run-android --variant=release
 ```
@@ -22,7 +22,7 @@ react-native run-android --variant=release
 
 <hr/>
 
-On iOS:
+On iOS (only first frame line:col is important):
 ```
 react-native run-ios --configuration "Release"
 ```
@@ -34,9 +34,9 @@ react-native run-ios --configuration "Release"
 
 <hr/>
 
-Out of this error you will get the `line` & `col` where the crash happend, we need that to feed into symbolic later.
+We need `line` & `col` to feed into symbolic tests.
 
-To generate the source maps need for symbolic to test, run:
+To generate the source maps for symbolic, run:
 
 On Android:
 ```
@@ -68,8 +68,8 @@ git clone --depth 1 -b feature/react-native-tests https://github.com/getsentry/s
 
 Here are the tests: https://github.com/getsentry/symbolic/pull/78/files#diff-55ed52f2de2342e85ec60818eb47e7ccR136
 
-If you want to copy new source maps to test in symbolic, copy them to `py/tests/res/sourcemaps/` in symbolic.  
-We only need the sourcemaps since the source code is inlined.
+If you want to copy new source maps to test in symbolic, copy them to `py/tests/res/sourcemaps/`.  
+We only need the sourcemaps since the source code is inlined there.
 
 To run the tests in symbolic:
 Required:
@@ -128,5 +128,5 @@ tests/test_sourcemaps.py:147: AssertionError
 ============================================= 1 failed, 8 passed in 0.29 seconds ==============================================
 ```
 
-This shows that the source map test for Android are failing.  
-Both source code location on iOS and Android should be the same, even though the reported crash location can be different.
+This shows that the source map test for Android is failing.  
+Both source code location on iOS and Android should be the same (even though the reported crash location can be different).
